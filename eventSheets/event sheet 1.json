@@ -1,0 +1,1181 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "BrownSlime",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 187234463125935
+		},
+		{
+			"eventType": "variable",
+			"name": "PinkAblilty",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 620866155741663
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "playermovement",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 826780606934824,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 182055168470627,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Sprite",
+							"sid": 869325749293397,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 613959490524840
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 581399451960332,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Sprite",
+							"sid": 649272332507227,
+							"parameters": {
+								"x": "Sprite.X+ 3"
+							}
+						}
+					],
+					"sid": 639407602634833,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 932581278132164,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 365070067386364,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Sprite",
+							"sid": 152559453398684,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 841397613699140
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 546603589701508,
+							"parameters": {
+								"key": 87
+							}
+						},
+						{
+							"id": "is-by-wall",
+							"objectClass": "Sprite",
+							"sid": 362876354834138,
+							"behaviorType": "Platform",
+							"parameters": {
+								"side": "right"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Sprite",
+							"sid": 423972504561506,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 821243915666107
+				}
+			],
+			"sid": 477743713866074
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "enemy",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "RedSlime",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Sprite",
+									"sid": 115907855901149,
+									"parameters": {
+										"object": "Sprite2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Sprite2",
+									"sid": 651168361988364
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Sprite",
+									"sid": 588936044994400,
+									"parameters": {
+										"instance-variable": "RedSlimeAbility",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 905300524570645,
+									"parameters": {
+										"animation": "\"grow\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "Sprite",
+									"sid": 921977866393229,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "600"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 736872482427028
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 148657885503147,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 431317248111103
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 385684935961698,
+									"disabled": true,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "Sprite",
+									"sid": 575108569675091,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "300"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 844768304018476,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Sprite",
+									"sid": 552334724246340,
+									"parameters": {
+										"instance-variable": "RedSlimeAbility",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 934150096540755
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Sprite",
+									"sid": 571427709562159,
+									"parameters": {
+										"instance-variable": "RedSlimeAbility"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 411354073141967,
+									"parameters": {
+										"animation": "\"grow\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "Sprite",
+									"sid": 160771153074679,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "600"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 567494900828498
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 122962131437301,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 811697712621213
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "Sprite",
+									"sid": 844274766125756,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "300"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 155668038356065,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Sprite",
+									"sid": 558499001973671,
+									"parameters": {
+										"instance-variable": "RedSlimeAbility",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 381762212359795,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Sprite",
+									"sid": 148778456063991,
+									"parameters": {
+										"instance-variable": "RedSlimeAbility"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 267435351016748
+						}
+					],
+					"sid": 652211014709256
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "LightBlueSlime",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Sprite",
+									"sid": 130904856765741,
+									"parameters": {
+										"object": "Sprite3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Sprite3",
+									"sid": 840064116643921
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Sprite",
+									"sid": 652266521866884,
+									"disabled": true,
+									"parameters": {
+										"instance-variable": "BlueSlime",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-double-jump",
+									"objectClass": "Sprite",
+									"sid": 595068246395518,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "enabled"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 246585406857212,
+									"parameters": {
+										"animation": "\"grow2\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 579159180500625
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 706464468826304,
+									"parameters": {
+										"seconds": "6"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 953282740701931
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 429447599427486,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-double-jump",
+									"objectClass": "Sprite",
+									"sid": 616220174300205,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 865907687560064
+						}
+					],
+					"sid": 843870714948223
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Sprite",
+							"sid": 763859394385326,
+							"parameters": {
+								"object": "Sprite4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Sprite4",
+							"sid": 813479406524903
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 317750720326028,
+							"parameters": {
+								"variable": "BrownSlime",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sprite",
+							"sid": 116689626491816,
+							"parameters": {
+								"animation": "\"grow3\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 674981097340796
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 932605971962018,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 718710489713037
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 539585935587202,
+							"parameters": {
+								"variable": "BrownSlime",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sprite",
+							"sid": 924793093920987,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 526391321054475
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Sprite5",
+							"sid": 633306124584083,
+							"parameters": {
+								"object": "Sprite2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Sprite2",
+							"sid": 357772143420694
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Sprite5",
+							"sid": 237002315643403
+						}
+					],
+					"sid": 129545685031616
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Sprite5",
+							"sid": 420951569035465,
+							"parameters": {
+								"object": "plartfrom"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Sprite5",
+							"sid": 668321109465162
+						}
+					],
+					"sid": 738785710042963
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Sprite5",
+							"sid": 617105050979563,
+							"parameters": {
+								"object": "Sprite6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Sprite5",
+							"sid": 126252755248627
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sprite6",
+							"sid": 601913325851000,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 177764644043075,
+							"parameters": {
+								"seconds": "1"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Sprite6",
+							"sid": 478270526423817
+						}
+					],
+					"sid": 439912361703803
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "DarkBlueSlime",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Sprite",
+									"sid": 710107282390380,
+									"parameters": {
+										"object": "Sprite7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Sprite7",
+									"sid": 143643061741679
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Sprite",
+									"sid": 945033917152466,
+									"disabled": true,
+									"parameters": {
+										"instance-variable": "DarkBlueAblilty",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Sprite",
+									"sid": 796155092741476,
+									"parameters": {
+										"instance-variable": "DarkBlue",
+										"value": "\"true\""
+									}
+								}
+							],
+							"sid": 192314473510248
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 936310187330848,
+									"parameters": {
+										"key": 87
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Sprite",
+									"sid": 386216564011240,
+									"disabled": true,
+									"parameters": {
+										"instance-variable": "DarkBlueAblilty"
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "Sprite",
+									"sid": 723215258278838,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "right"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Sprite",
+									"sid": 529572293596947,
+									"parameters": {
+										"instance-variable": "DarkBlue",
+										"comparison": 0,
+										"value": "\"true\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 816343002532220,
+									"parameters": {
+										"animation": "\"grow4\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-vector-y",
+									"objectClass": "Sprite",
+									"sid": 930561915061554,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-y": "Self.Y-1800"
+									}
+								},
+								{
+									"id": "set-vector-x",
+									"objectClass": "Sprite",
+									"sid": 617962717982301,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "Self.X-1200"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 392840035001689
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 571138690220956,
+									"parameters": {
+										"seconds": "3"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 234221252597625
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Sprite",
+									"sid": 706223061827372,
+									"disabled": true,
+									"parameters": {
+										"instance-variable": "DarkBlueAblilty",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 792399816221029,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Sprite",
+									"sid": 349399184351317,
+									"parameters": {
+										"instance-variable": "DarkBlue",
+										"value": "\"false\""
+									}
+								}
+							],
+							"sid": 656149351452676
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 717136438870691,
+									"parameters": {
+										"key": 87
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Sprite",
+									"sid": 812492509783716,
+									"disabled": true,
+									"parameters": {
+										"instance-variable": "DarkBlueAblilty"
+									}
+								},
+								{
+									"id": "is-by-wall",
+									"objectClass": "Sprite",
+									"sid": 975973443312540,
+									"behaviorType": "Platform",
+									"parameters": {
+										"side": "left"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Sprite",
+									"sid": 390672990625202,
+									"parameters": {
+										"instance-variable": "DarkBlue",
+										"comparison": 0,
+										"value": "\"true\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 248763982691051,
+									"parameters": {
+										"animation": "\"grow4\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-vector-y",
+									"objectClass": "Sprite",
+									"sid": 928236720918818,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-y": "Self.Y-1800"
+									}
+								},
+								{
+									"id": "set-vector-x",
+									"objectClass": "Sprite",
+									"sid": 157990191225559,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-x": "Self.X-1200"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 935040090552004
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 103447057600866,
+									"parameters": {
+										"seconds": "5"
+									}
+								},
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 332843778252435
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Sprite",
+									"sid": 952208048864202,
+									"disabled": true,
+									"parameters": {
+										"instance-variable": "DarkBlueAblilty",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Sprite",
+									"sid": 219436524490541,
+									"parameters": {
+										"animation": "\"Animation 1\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Sprite",
+									"sid": 858897566516313,
+									"parameters": {
+										"instance-variable": "DarkBlue",
+										"value": "\"false\""
+									}
+								}
+							],
+							"sid": 556906058286364
+						}
+					],
+					"sid": 976210274532690
+				}
+			],
+			"sid": 760251951065814
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 447501038120418,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 913230827342449,
+					"parameters": {
+						"variable": "BrownSlime"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "spawner",
+					"sid": 311434428774359,
+					"parameters": {
+						"object": "Sprite5",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Sprite5",
+					"sid": 673889093993294,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Sprite5",
+					"sid": 349655988568238,
+					"parameters": {
+						"x": "spawner.X",
+						"y": "spawner.Y"
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "Sprite5",
+					"sid": 293414495453978,
+					"parameters": {
+						"x": "Cursor.X",
+						"y": "Cursor.Y"
+					}
+				}
+			],
+			"sid": 243712642084632
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 533837530090803
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 763550556151505,
+					"parameters": {
+						"variable": "BrownSlime",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 751772913873347,
+					"parameters": {
+						"variable": "PinkAblilty",
+						"value": "false"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 118828320185485,
+					"parameters": {
+						"audio-file": "slimebkg",
+						"loop": "looping",
+						"volume": "-10",
+						"tag-optional": "\"Slime\""
+					}
+				}
+			],
+			"sid": 489553410821592
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 473578791784568
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "spawner",
+					"sid": 327470983325803,
+					"parameters": {
+						"y": "Sprite.Y"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "spawner",
+					"sid": 878672611582267,
+					"parameters": {
+						"x": "Sprite.X"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Cursor",
+					"sid": 631760257405446,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 299459037320541
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "Sprite",
+					"sid": 636840568516916
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Sprite",
+					"sid": 750125157267069
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 397670869685173,
+					"parameters": {
+						"tag": "\"Slime\"",
+						"db": "-100",
+						"duration": "1",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 168690742108646
+				}
+			],
+			"sid": 270710854344607
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "abilites",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 416570385467707,
+							"parameters": {
+								"variable": "PinkAblilty"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-jump-strength",
+							"objectClass": "Sprite",
+							"sid": 106046924294654,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "600"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sprite",
+							"sid": 575706569090009,
+							"parameters": {
+								"animation": "\"grow\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 709940440928180
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 237780266163465,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 999897547562704
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sprite",
+							"sid": 225823715854630,
+							"parameters": {
+								"animation": "\"Animation 1\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "Sprite",
+							"sid": 469066739922841,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "300"
+							}
+						}
+					],
+					"sid": 328236205702106,
+					"disabled": true
+				}
+			],
+			"sid": 441856701148924
+		}
+	],
+	"sid": 644751812416291
+}
