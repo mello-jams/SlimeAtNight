@@ -31,6 +31,13 @@
 						"exportQuality": 0.8,
 						"imageSpriteId": 6182770,
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 1.089171974522293,
+								"y": 0.4966442953020134
+							}
+						],
 						"duration": 1
 					}
 				],

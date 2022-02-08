@@ -9,6 +9,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 628124275989922
+		},
+		{
+			"name": "PoisonNum",
+			"type": "number",
+			"desc": "",
+			"sid": 697941354550299
 		}
 	],
 	"behaviorTypes": [
@@ -48,6 +54,53 @@
 				"repeatCount": 1,
 				"repeatTo": 0,
 				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 151,
+						"height": 139,
+						"originX": 0.6225165562913907,
+						"originY": 0.5971223021582733,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8792739,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 151,
+						"height": 139,
+						"originX": 0.6225165562913907,
+						"originY": 0.5971223021582733,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7464519,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 151,
+						"height": 139,
+						"originX": 0.6225165562913907,
+						"originY": 0.5971223021582733,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 9696867,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 979372406286004,
+				"name": "Poison",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
 			}
 		],
 		"subfolders": []

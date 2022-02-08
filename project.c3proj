@@ -88,6 +88,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
 			"author": "Scirra",
@@ -98,14 +106,6 @@
 			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
-			"author": "Scirra",
-			"version": "r276.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Bullet",
-			"name": "Bullet",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -135,8 +135,7 @@
 			"TiledBackground2",
 			"TiledBackground3",
 			"TiledBackground4",
-			"HealthBar",
-			"SlimeRocks"
+			"HealthBar"
 		],
 		"subfolders": [
 			{
@@ -149,7 +148,10 @@
 					"AcidSlime",
 					"PoisonSlime",
 					"LavaSlime",
-					"player"
+					"player",
+					"PoisonPuddle",
+					"SlimeRocks",
+					"FireBall"
 				],
 				"subfolders": [],
 				"name": "Slimes"
