@@ -22,6 +22,27 @@
 			"sid": 620866155741663
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 561035550286559
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "HealthBar",
+					"sid": 429799085849500,
+					"parameters": {
+						"width": "183*(Player.HealthNum/3)"
+					}
+				}
+			],
+			"sid": 245048230997174
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "playermovement",
@@ -1175,6 +1196,175 @@
 				}
 			],
 			"sid": 441856701148924
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Slimes",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Earth Slime",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "group",
+							"disabled": false,
+							"title": "Rock Slime Attack",
+							"description": "",
+							"isActiveOnStart": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-los-to-object",
+											"objectClass": "EarthSlime",
+											"sid": 703613544280594,
+											"behaviorType": "LineOfSight",
+											"parameters": {
+												"object": "player",
+												"image-point": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "move-to-object",
+											"objectClass": "EarthSlime",
+											"sid": 221602958450340,
+											"behaviorType": "MoveTo",
+											"parameters": {
+												"object": "player",
+												"image-point": "0",
+												"mode": "direct"
+											}
+										}
+									],
+									"sid": 181287826869138,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-x-seconds",
+													"objectClass": "System",
+													"sid": 170205754050261,
+													"parameters": {
+														"interval-seconds": "2"
+													}
+												},
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 792506416961909,
+													"parameters": {
+														"first-value": "distance(player.X,player.Y,EarthSlime.X,EarthSlime.Y)",
+														"comparison": 3,
+														"second-value": "400"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 477485373465613,
+													"parameters": {
+														"object-to-create": "SlimeRocks",
+														"layer": "0",
+														"x": "EarthSlime.X+50",
+														"y": "EarthSlime.Y",
+														"create-hierarchy": false
+													}
+												}
+											],
+											"sid": 574643952990624
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-created",
+											"objectClass": "SlimeRocks",
+											"sid": 131601111787547
+										}
+									],
+									"actions": [
+										{
+											"id": "set-size",
+											"objectClass": "SlimeRocks",
+											"sid": 618202958139282,
+											"parameters": {
+												"width": "64.455686 ",
+												"height": "29.542189"
+											}
+										}
+									],
+									"sid": 544272992427218
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "player",
+											"sid": 712381927465620,
+											"parameters": {
+												"object": "SlimeRocks"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "player",
+											"sid": 943724009798818,
+											"parameters": {
+												"instance-variable": "Healthnum",
+												"value": "1"
+											}
+										}
+									],
+									"sid": 458653954850122
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "player",
+											"sid": 684306825404564,
+											"parameters": {
+												"instance-variable": "Healthnum",
+												"comparison": 3,
+												"value": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "restart-layout",
+											"objectClass": "System",
+											"sid": 402897860687721
+										}
+									],
+									"sid": 939595948267771
+								}
+							],
+							"sid": 498963828554924
+						}
+					],
+					"sid": 656922784888615
+				}
+			],
+			"sid": 719884362325867
 		}
 	],
 	"sid": 644751812416291

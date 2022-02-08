@@ -1,0 +1,48 @@
+{
+	"name": "LavaSlime",
+	"plugin-id": "Sprite",
+	"sid": 382621621412362,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 519699780587593
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 892345672459491
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 157,
+						"height": 149,
+						"originX": 0.5414012738853503,
+						"originY": 0.436241610738255,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 741301,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 583445335954135,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

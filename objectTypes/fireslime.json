@@ -1,0 +1,48 @@
+{
+	"name": "FireSlime",
+	"plugin-id": "Sprite",
+	"sid": 483261164717647,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 526422884144027
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 175726005257961
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 157,
+						"height": 149,
+						"originX": 0.5414012738853503,
+						"originY": 0.436241610738255,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6182770,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 792520063457592,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

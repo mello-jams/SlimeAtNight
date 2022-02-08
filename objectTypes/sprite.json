@@ -33,6 +33,12 @@
 			"type": "string",
 			"desc": "",
 			"sid": 885855857656253
+		},
+		{
+			"name": "HealthBar",
+			"type": "number",
+			"desc": "",
+			"sid": 282306356755664
 		}
 	],
 	"behaviorTypes": [

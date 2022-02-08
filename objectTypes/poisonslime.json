@@ -1,0 +1,48 @@
+{
+	"name": "PoisonSlime",
+	"plugin-id": "Sprite",
+	"sid": 915792002798252,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 302914733620205
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 101119312711971
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 157,
+						"height": 149,
+						"originX": 0.5414012738853503,
+						"originY": 0.436241610738255,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8882923,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 170816725539624,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

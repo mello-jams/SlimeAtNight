@@ -56,6 +56,30 @@
 		},
 		{
 			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
@@ -72,14 +96,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "scrollto",
-			"name": "Scroll To",
-			"author": "Scirra",
-			"version": "r276.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
 			"author": "Scirra",
@@ -90,14 +106,6 @@
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
-			"author": "Scirra",
-			"version": "r276.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "LOS",
-			"name": "Line of sight",
 			"author": "Scirra",
 			"version": "r276.2",
 			"bundled": false
@@ -126,9 +134,27 @@
 			"Sprite8",
 			"TiledBackground2",
 			"TiledBackground3",
-			"TiledBackground4"
+			"TiledBackground4",
+			"HealthBar",
+			"SlimeRocks"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"FireSlime",
+					"IceSlime",
+					"WaterSlime",
+					"LightningSlime",
+					"EarthSlime",
+					"AcidSlime",
+					"PoisonSlime",
+					"LavaSlime",
+					"player"
+				],
+				"subfolders": [],
+				"name": "Slimes"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],

@@ -1,0 +1,48 @@
+{
+	"name": "LightningSlime",
+	"plugin-id": "Sprite",
+	"sid": 274442434726060,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 560377498916972
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 201752663600232
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 157,
+						"height": 149,
+						"originX": 0.5414012738853503,
+						"originY": 0.436241610738255,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7438873,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 425944156587458,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
