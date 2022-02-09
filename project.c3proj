@@ -72,6 +72,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "scrollto",
 			"name": "Scroll To",
 			"author": "Scirra",
@@ -96,14 +104,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
-			"author": "Scirra",
-			"version": "r276.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Sin",
 			"name": "Sine",
 			"author": "Scirra",
@@ -114,7 +114,7 @@
 	"uniqueId": "5q3u3i8lvlr",
 	"objectTypes": {
 		"items": [
-			"Sprite",
+			"MPlayer",
 			"plartfrom",
 			"Keyboard",
 			"Mouse",

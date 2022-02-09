@@ -64,7 +64,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 182055168470627,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -73,7 +73,7 @@
 						},
 						{
 							"id": "set-mirrored",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 869325749293397,
 							"parameters": {
 								"state": "not-mirrored"
@@ -97,10 +97,10 @@
 					"actions": [
 						{
 							"id": "set-x",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 649272332507227,
 							"parameters": {
-								"x": "Sprite.X+ 3"
+								"x": "MPlayer.X+ 3"
 							}
 						}
 					],
@@ -122,7 +122,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 365070067386364,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -131,7 +131,7 @@
 						},
 						{
 							"id": "set-mirrored",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 152559453398684,
 							"parameters": {
 								"state": "mirrored"
@@ -153,7 +153,7 @@
 						},
 						{
 							"id": "is-by-wall",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 362876354834138,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -165,7 +165,7 @@
 					"actions": [
 						{
 							"id": "simulate-control",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 423972504561506,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -197,7 +197,7 @@
 							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 115907855901149,
 									"parameters": {
 										"object": "Sprite2"
@@ -212,7 +212,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 588936044994400,
 									"parameters": {
 										"instance-variable": "RedSlimeAbility",
@@ -221,7 +221,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 905300524570645,
 									"parameters": {
 										"animation": "\"grow\"",
@@ -230,7 +230,7 @@
 								},
 								{
 									"id": "set-jump-strength",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 921977866393229,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -266,7 +266,7 @@
 								},
 								{
 									"id": "set-jump-strength",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 575108569675091,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -275,7 +275,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 844768304018476,
 									"parameters": {
 										"animation": "\"Animation 1\"",
@@ -284,7 +284,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 552334724246340,
 									"parameters": {
 										"instance-variable": "RedSlimeAbility",
@@ -299,7 +299,7 @@
 							"conditions": [
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 571427709562159,
 									"parameters": {
 										"instance-variable": "RedSlimeAbility"
@@ -309,7 +309,7 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 411354073141967,
 									"parameters": {
 										"animation": "\"grow\"",
@@ -318,7 +318,7 @@
 								},
 								{
 									"id": "set-jump-strength",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 160771153074679,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -345,7 +345,7 @@
 								},
 								{
 									"id": "set-jump-strength",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 844274766125756,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -354,7 +354,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 155668038356065,
 									"parameters": {
 										"animation": "\"Animation 1\"",
@@ -363,7 +363,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 558499001973671,
 									"parameters": {
 										"instance-variable": "RedSlimeAbility",
@@ -379,7 +379,7 @@
 							"conditions": [
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 148778456063991,
 									"parameters": {
 										"instance-variable": "RedSlimeAbility"
@@ -404,7 +404,7 @@
 							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 130904856765741,
 									"parameters": {
 										"object": "Sprite3"
@@ -419,7 +419,7 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 652266521866884,
 									"disabled": true,
 									"parameters": {
@@ -429,7 +429,7 @@
 								},
 								{
 									"id": "set-double-jump",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 595068246395518,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -438,7 +438,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 246585406857212,
 									"parameters": {
 										"animation": "\"grow2\"",
@@ -465,7 +465,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 429447599427486,
 									"parameters": {
 										"animation": "\"Animation 1\"",
@@ -474,7 +474,7 @@
 								},
 								{
 									"id": "set-double-jump",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 616220174300205,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -492,7 +492,7 @@
 					"conditions": [
 						{
 							"id": "on-collision-with-another-object",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 763859394385326,
 							"parameters": {
 								"object": "Sprite4"
@@ -516,7 +516,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 116689626491816,
 							"parameters": {
 								"animation": "\"grow3\"",
@@ -552,7 +552,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 924793093920987,
 							"parameters": {
 								"animation": "\"Animation 1\"",
@@ -568,17 +568,17 @@
 						{
 							"id": "on-collision-with-another-object",
 							"objectClass": "Sprite5",
-							"sid": 633306124584083,
+							"sid": 681017769337291,
 							"parameters": {
-								"object": "Sprite2"
+								"object": "WaterSlime"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "destroy",
-							"objectClass": "Sprite2",
-							"sid": 357772143420694
+							"objectClass": "WaterSlime",
+							"sid": 396004842895304
 						},
 						{
 							"id": "destroy",
@@ -587,6 +587,32 @@
 						}
 					],
 					"sid": 129545685031616
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Sprite5",
+							"sid": 149581245782921,
+							"parameters": {
+								"object": "PoisonSlime"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "PoisonPuddle",
+							"sid": 596961403468016
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Sprite5",
+							"sid": 787391371381105
+						}
+					],
+					"sid": 921750872493133
 				},
 				{
 					"eventType": "block",
@@ -664,7 +690,7 @@
 							"conditions": [
 								{
 									"id": "on-collision-with-another-object",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 710107282390380,
 									"parameters": {
 										"object": "Sprite7"
@@ -679,9 +705,8 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 945033917152466,
-									"disabled": true,
 									"parameters": {
 										"instance-variable": "DarkBlueAblilty",
 										"value": "true"
@@ -689,7 +714,7 @@
 								},
 								{
 									"id": "set-instvar-value",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 796155092741476,
 									"parameters": {
 										"instance-variable": "DarkBlue",
@@ -712,16 +737,15 @@
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 386216564011240,
-									"disabled": true,
 									"parameters": {
 										"instance-variable": "DarkBlueAblilty"
 									}
 								},
 								{
 									"id": "is-by-wall",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 723215258278838,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -730,7 +754,7 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 529572293596947,
 									"parameters": {
 										"instance-variable": "DarkBlue",
@@ -742,7 +766,7 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 816343002532220,
 									"parameters": {
 										"animation": "\"grow4\"",
@@ -751,7 +775,7 @@
 								},
 								{
 									"id": "set-vector-y",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 930561915061554,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -760,7 +784,7 @@
 								},
 								{
 									"id": "set-vector-x",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 617962717982301,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -787,9 +811,8 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 706223061827372,
-									"disabled": true,
 									"parameters": {
 										"instance-variable": "DarkBlueAblilty",
 										"value": "false"
@@ -797,7 +820,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 792399816221029,
 									"parameters": {
 										"animation": "\"Animation 1\"",
@@ -806,7 +829,7 @@
 								},
 								{
 									"id": "set-instvar-value",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 349399184351317,
 									"parameters": {
 										"instance-variable": "DarkBlue",
@@ -829,16 +852,15 @@
 								},
 								{
 									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 812492509783716,
-									"disabled": true,
 									"parameters": {
 										"instance-variable": "DarkBlueAblilty"
 									}
 								},
 								{
 									"id": "is-by-wall",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 975973443312540,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -847,7 +869,7 @@
 								},
 								{
 									"id": "compare-instance-variable",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 390672990625202,
 									"parameters": {
 										"instance-variable": "DarkBlue",
@@ -859,7 +881,7 @@
 							"actions": [
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 248763982691051,
 									"parameters": {
 										"animation": "\"grow4\"",
@@ -868,7 +890,7 @@
 								},
 								{
 									"id": "set-vector-y",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 928236720918818,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -877,7 +899,7 @@
 								},
 								{
 									"id": "set-vector-x",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 157990191225559,
 									"behaviorType": "Platform",
 									"parameters": {
@@ -904,9 +926,8 @@
 								},
 								{
 									"id": "set-boolean-instvar",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 952208048864202,
-									"disabled": true,
 									"parameters": {
 										"instance-variable": "DarkBlueAblilty",
 										"value": "false"
@@ -914,7 +935,7 @@
 								},
 								{
 									"id": "set-animation",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 219436524490541,
 									"parameters": {
 										"animation": "\"Animation 1\"",
@@ -923,7 +944,7 @@
 								},
 								{
 									"id": "set-instvar-value",
-									"objectClass": "Sprite",
+									"objectClass": "MPlayer",
 									"sid": 858897566516313,
 									"parameters": {
 										"instance-variable": "DarkBlue",
@@ -1059,7 +1080,7 @@
 					"objectClass": "spawner",
 					"sid": 327470983325803,
 					"parameters": {
-						"y": "Sprite.Y"
+						"y": "MPlayer.Y"
 					}
 				},
 				{
@@ -1067,7 +1088,7 @@
 					"objectClass": "spawner",
 					"sid": 878672611582267,
 					"parameters": {
-						"x": "Sprite.X"
+						"x": "MPlayer.X"
 					}
 				},
 				{
@@ -1087,14 +1108,14 @@
 			"conditions": [
 				{
 					"id": "is-outside-layout",
-					"objectClass": "Sprite",
+					"objectClass": "MPlayer",
 					"sid": 636840568516916
 				}
 			],
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "Sprite",
+					"objectClass": "MPlayer",
 					"sid": 750125157267069
 				},
 				{
@@ -1138,7 +1159,7 @@
 					"actions": [
 						{
 							"id": "set-jump-strength",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 106046924294654,
 							"behaviorType": "Platform",
 							"parameters": {
@@ -1147,7 +1168,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 575706569090009,
 							"parameters": {
 								"animation": "\"grow\"",
@@ -1174,7 +1195,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 225823715854630,
 							"parameters": {
 								"animation": "\"Animation 1\"",
@@ -1183,7 +1204,7 @@
 						},
 						{
 							"id": "set-jump-strength",
-							"objectClass": "Sprite",
+							"objectClass": "MPlayer",
 							"sid": 469066739922841,
 							"behaviorType": "Platform",
 							"parameters": {
