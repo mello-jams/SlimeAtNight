@@ -5,7 +5,7 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "Healthnum",
+			"name": "HP",
 			"type": "number",
 			"desc": "",
 			"sid": 628124275989922

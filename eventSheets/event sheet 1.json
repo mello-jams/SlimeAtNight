@@ -36,7 +36,7 @@
 					"objectClass": "HealthBar",
 					"sid": 429799085849500,
 					"parameters": {
-						"width": "183*(Player.HealthNum/3)"
+						"width": "183*(Player.HP/3)"
 					}
 				}
 			],
@@ -1348,7 +1348,7 @@
 											"objectClass": "player",
 											"sid": 943724009798818,
 											"parameters": {
-												"instance-variable": "Healthnum",
+												"instance-variable": "HP",
 												"value": "1"
 											}
 										}
@@ -1363,7 +1363,7 @@
 											"objectClass": "player",
 											"sid": 684306825404564,
 											"parameters": {
-												"instance-variable": "Healthnum",
+												"instance-variable": "HP",
 												"comparison": 3,
 												"value": "0"
 											}
@@ -1681,7 +1681,7 @@
 													"objectClass": "player",
 													"sid": 785942807828367,
 													"parameters": {
-														"instance-variable": "Healthnum",
+														"instance-variable": "HP",
 														"value": "1"
 													}
 												}
@@ -1698,7 +1698,7 @@
 											"objectClass": "player",
 											"sid": 565178147771160,
 											"parameters": {
-												"instance-variable": "Healthnum",
+												"instance-variable": "HP",
 												"comparison": 3,
 												"value": "0"
 											}
@@ -2039,7 +2039,7 @@
 									"objectClass": "player",
 									"sid": 135542993756825,
 									"parameters": {
-										"instance-variable": "Healthnum",
+										"instance-variable": "HP",
 										"value": "1"
 									}
 								},
@@ -2059,7 +2059,7 @@
 									"objectClass": "player",
 									"sid": 785357374019428,
 									"parameters": {
-										"instance-variable": "Healthnum",
+										"instance-variable": "HP",
 										"comparison": 3,
 										"value": "0"
 									}
